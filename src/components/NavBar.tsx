@@ -1,4 +1,4 @@
-import { HStack, Image, Text } from '@chakra-ui/react'
+import { HStack, Image } from '@chakra-ui/react'
 import KFCLogo from '../assets/KFC.webp'
 import ColorModeSwitch from './ColorModeSwitch'
 
