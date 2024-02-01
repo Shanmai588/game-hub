@@ -9,11 +9,9 @@ export interface Platform {
 export interface Game {
   id: number;
   name: string;
-  // slug: string;
-  // games_count:number;
   background_image: string;
   parent_platforms: {platform: Platform}[];
-  // description: string
+  metacritic: number
 }
 
 interface FetchGameRespones {
