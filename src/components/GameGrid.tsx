@@ -14,9 +14,9 @@ const GameGrid = () => {
         {error && <Text>{error}</Text>}
         {/* beaware it should be cloumns not column */}
         <SimpleGrid columns = {{sm:1, md:2,lg:3}} spacing = {10}>
-          {isLoading && skeletons.map((skeleton)=><GameCardContainer><GameCardSkeleton key = {skeleton}></GameCardSkeleton></GameCardContainer>)}
+          {isLoading && skeletons.map((skeleton)=><GameCardContainer key = {skeleton}><GameCardSkeleton key = {skeleton}></GameCardSkeleton></GameCardContainer>)}
           {games.map((game) => (
-            <GameCardContainer>
+            <GameCardContainer key = {game.id}>
               <GameCard key ={game.id} game={game}></GameCard>
             </GameCardContainer>
           ))}
