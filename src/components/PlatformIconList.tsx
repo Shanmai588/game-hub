@@ -26,13 +26,12 @@ const iconMap: { [key: string]: IconType } = {
   web: BsGlobe,
   android: FaAndroid,
 };
-
 const PlatformIconList = ({ platforms }: Props) => {
   return (
     // the 1 is theme.space value, it is an enum to ensure consistence of layout
     <HStack marginY={1}>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} color='gray.500'></Icon>
+        <Icon key = {platform.slug} as={iconMap[platform.slug]} color='gray.500'></Icon>
       ))}
     </HStack>
   );
