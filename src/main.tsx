@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   // strict mode turn on make .final not working with isLoading part
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <App />
     </ChakraProvider>
   </React.StrictMode>
