@@ -1,5 +1,7 @@
 # Game Hub
-Welcome to Game Hub, a dynamic web frontend for game enthusiasts! This project is a game website frontend developed using TypeScript, React, and Vite based on the video from https://codewithmosh.com/p/ultimate-react-part1.
+Welcome to Game Hub, a dynamic web frontend for game enthusiasts! This project is a game website frontend developed using TypeScript, React, and Vite based on the video from [code with mosh](https://codewithmosh.com/p/ultimate-react-part1).
+
+You can preview the website [here](https://game-hub-rouge-sigma.vercel.app/)
 
 ## Technologies Used
 - TypeScript
