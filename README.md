@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Game Hub
+Welcome to Game Hub, a dynamic web frontend for game enthusiasts! This project is a game website frontend developed using TypeScript, React, and Vite based on the video from https://codewithmosh.com/p/ultimate-react-part1.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
+- TypeScript
+- React
+- Vite
+- RAWG Video Game Database API
 
-Currently, two official plugins are available:
+## Setup and Installation
+To get started with Game Hub, you'll need to have Node.js and npm installed on your machine. Follow these steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Clone the repository:
+``` bash
+git clone https://github.com/yourusername/game-hub.git
 ```
+Navigate to the project directory:
+``` bash
+cd game-hub
+```
+Install the required dependencies:
+```bash
+Copy code
+npm install
+```
+## Usage
+To run Game Hub locally:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Start the development server:
+```bash
+npm run dev
+```
+Open your browser and navigate to http://localhost:xxxx.
+Enjoy exploring various games and their details!
+
+## Features
+1. Game Browsing: Easily browse through a vast collection of games.
+2. Detailed Information: View detailed information about each game including genres, platforms, and ratings.
+3. Responsive Design: Enjoy a seamless experience on both desktop and mobile devices.
