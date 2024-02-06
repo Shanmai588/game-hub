@@ -26,7 +26,7 @@ function App() {
       //make the nav bar only take 200px
       templateColumns={{
         base: "1fr",
-        lg: "250px 1fr",
+        lg: "200px 1fr",
       }}
     >
       <GridItem area="nav">
