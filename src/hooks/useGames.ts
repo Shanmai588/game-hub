@@ -15,6 +15,6 @@ export interface Game {
   genres: Genre[]
 }
 // Anytime gameQuery change, it will refetch the data
-const useGames = (gameQuery: GameQuery) => useData<Game>("/games", {params: {genres:gameQuery.genre?.id, parent_platforms: gameQuery.platform?.id, ordering: gameQuery.sortType?.value}}, [gameQuery])
+const useGames = (gameQuery: GameQuery) => useData<Game>("/games", {params: {genres:gameQuery.genre?.id, parent_platforms: gameQuery.platform?.id, ordering: gameQuery.sortType?.value, search:gameQuery.searchText}}, [gameQuery])
 
 export default useGames;
