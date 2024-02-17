@@ -1,14 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import platforms from "../data/platform";
-import apiClient from "../services/api.client";
-import { FetchRespones } from "./useData";
-import { Platform } from "./useGames";
-
+import APIClient from "../services/api.client";
+const platformAPI = new APIClient<Platform>("/platforms/lists/parents");
 const usePlatforms = () => {
   const fetchPlatforms = () => {
-    return apiClient
-      .get<FetchRespones<Platform>>("/platforms/lists/parents")
-      .then((res) => res.data.results);
+    return platformAPI.getAll();
   };
   return useQuery({
     queryKey: ["platforms"],
@@ -19,3 +15,8 @@ const usePlatforms = () => {
 };
 
 export default usePlatforms;
+export interface Platform {
+  id: number;
+  name: string;
+  slug: string;
+}
