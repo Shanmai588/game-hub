@@ -21,8 +21,8 @@ const useGames = (gameQuery: GameQuery) => {
     queryFn: ({ pageParam = 1 }) => {
       return gameAPI.getFetchRespones({
         params: {
-          genres: gameQuery.genre?.id,
-          parent_platforms: gameQuery.platform?.id,
+          genres: gameQuery.genreID,
+          parent_platforms: gameQuery.platformID,
           ordering: gameQuery.sortType?.value,
           search: gameQuery.searchText,
           page: pageParam,

@@ -10,10 +10,10 @@ import {
 import useGenres, { Genre } from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 interface Props {
-  selectedGenre: Genre | null;
+  selectedGenreID: number | null;
   onGenreClick: (selectedGenre: Genre) => void;
 }
-const GenreList = ({ selectedGenre, onGenreClick }: Props) => {
+const GenreList = ({ selectedGenreID, onGenreClick }: Props) => {
   const { data, isLoading, error } = useGenres();
   if (error) return null;
   return (
@@ -35,7 +35,7 @@ const GenreList = ({ selectedGenre, onGenreClick }: Props) => {
               <Button
                 whiteSpace={"normal"}
                 textAlign={"left"}
-                fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
+                fontWeight={genre.id === selectedGenreID ? "bold" : "normal"}
                 variant={"link"}
                 fontSize={"large"}
                 onClick={() => {
