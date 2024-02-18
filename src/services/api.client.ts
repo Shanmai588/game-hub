@@ -11,6 +11,11 @@ class APIClient<T> {
   constructor(endpoint: string) {
     this.endpoint = endpoint;
   }
+  getFetchRespones = (requestConfig?: AxiosRequestConfig) => {
+    return axiosInstance
+      .get<FetchRespones<T>>(this.endpoint, requestConfig)
+      .then((res) => res.data);
+  };
   getAll = (requestConfig?: AxiosRequestConfig) => {
     return axiosInstance
       .get<FetchRespones<T>>(this.endpoint, requestConfig)
@@ -24,5 +29,6 @@ export default APIClient;
 
 export interface FetchRespones<T> {
   count: number;
+  next: string | null;
   results: T[];
 }
