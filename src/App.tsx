@@ -2,17 +2,9 @@ import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
 import GameGrid from "./components/GameGrid";
 import NavBar from "./components/NavBar";
 import GenreList from "./components/GenreList";
-import { useState } from "react";
 import PlatformSelector from "./components/PlatformSelector";
-import SortSelector, { SortType } from "./components/SortSelector";
-export interface GameQuery {
-  genreID: number | null;
-  platformID: number | null;
-  sortType: SortType | null;
-  searchText: string;
-}
+import SortSelector from "./components/SortSelector";
 function App() {
-  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
   return (
     <Grid
       templateAreas={{
@@ -28,37 +20,19 @@ function App() {
       }}
     >
       <GridItem area="nav">
-        <NavBar
-          onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
-        ></NavBar>
+        <NavBar></NavBar>
       </GridItem>
       <Show above="lg">
         <GridItem area="aside" paddingX={5}>
-          <GenreList
-            selectedGenreID={gameQuery.genreID}
-            onGenreClick={(genre) => {
-              setGameQuery({ ...gameQuery, genreID: genre.id });
-            }}
-          ></GenreList>
+          <GenreList></GenreList>
         </GridItem>
       </Show>
       <GridItem area="main" padding={5}>
         <HStack>
-          <PlatformSelector
-            selectedPlatformID={gameQuery.platformID}
-            onPlatformClick={(platform) => {
-              console.log(platform);
-              setGameQuery({ ...gameQuery, platformID: platform.id });
-            }}
-          ></PlatformSelector>
-          <SortSelector
-            selectedSortType={gameQuery.sortType}
-            onSortClick={(type) => {
-              setGameQuery({ ...gameQuery, sortType: type });
-            }}
-          ></SortSelector>
+          <PlatformSelector></PlatformSelector>
+          <SortSelector></SortSelector>
         </HStack>
-        <GameGrid gameQuery={gameQuery}></GameGrid>
+        <GameGrid></GameGrid>
       </GridItem>
     </Grid>
   );
