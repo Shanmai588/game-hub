@@ -1,13 +1,13 @@
 import { HStack, Image } from "@chakra-ui/react";
-import KFCLogo from "../assets/KFC.webp";
+import Gamehub from "../assets/gamehub transback.webp";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
 const NavBar = () => {
   return (
     // horizontal stack
-    <HStack padding="10px">
-      <Image src={KFCLogo} boxSize="60px"></Image>
+    <HStack padding="20px" spacing="5%">
+      <Image src={Gamehub} boxSize="6%"></Image>
       <SearchInput></SearchInput>
       <ColorModeSwitch></ColorModeSwitch>
     </HStack>

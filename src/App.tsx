@@ -1,4 +1,4 @@
-import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Heading, Show } from "@chakra-ui/react";
 import GameGrid from "./components/GameGrid";
 import NavBar from "./components/NavBar";
 import GenreList from "./components/GenreList";
@@ -27,8 +27,11 @@ function App() {
           <GenreList></GenreList>
         </GridItem>
       </Show>
-      <GridItem area="main" padding={5}>
-        <HStack>
+      <GridItem area="main" paddingX={5}>
+        <Heading fontSize={"5xl"} marginBottom={3}>
+          Game
+        </Heading>
+        <HStack marginY="4" spacing={4}>
           <PlatformSelector></PlatformSelector>
           <SortSelector></SortSelector>
         </HStack>
