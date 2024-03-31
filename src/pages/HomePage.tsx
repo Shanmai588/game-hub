@@ -1,9 +1,10 @@
 import { Grid, GridItem, HStack, Heading, Show } from "@chakra-ui/react";
-import GameGrid from "./components/GameGrid";
-import GenreList from "./components/GenreList";
-import PlatformSelector from "./components/PlatformSelector";
-import SortSelector from "./components/SortSelector";
-function App() {
+import GenreList from "../components/GenreList";
+import PlatformSelector from "../components/PlatformSelector";
+import SortSelector from "../components/SortSelector";
+import GameGrid from "../components/GameGrid";
+
+const HomePage = () => {
   return (
     <Grid
       templateAreas={{
@@ -35,6 +36,6 @@ function App() {
       </GridItem>
     </Grid>
   );
-}
+};
 
-export default App;
+export default HomePage;
