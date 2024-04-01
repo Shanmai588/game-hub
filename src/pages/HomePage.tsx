@@ -25,10 +25,10 @@ const HomePage = () => {
         </GridItem>
       </Show>
       <GridItem area="main" paddingX={5}>
-        <Heading fontSize={"5xl"} marginBottom={3}>
+        <Heading fontSize={"5xl"} margin={3}>
           Games
         </Heading>
-        <HStack marginY="4" spacing={4}>
+        <HStack margin={3} spacing={4}>
           <PlatformSelector></PlatformSelector>
           <SortSelector></SortSelector>
         </HStack>

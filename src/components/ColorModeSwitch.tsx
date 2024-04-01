@@ -10,6 +10,7 @@ const ColorModeSwitch = () => {
         boxSize={10}
         as={colorMode === "dark" ? MdNightsStay : IoSunny}
         onClick={toggleColorMode}
+        cursor={"pointer"}
       ></Icon>
       {/* <Text whiteSpace={"nowrap"}>Dark Mode</Text> */}
     </HStack>
