@@ -3,6 +3,7 @@ import useGame from "../hooks/useGame";
 import { Box, Heading, Spinner } from "@chakra-ui/react";
 
 import ExpandableText from "../components/ExpandableText";
+import GameAttribute from "../components/GameAttribute";
 
 // Define the expected shape of params
 
@@ -20,6 +21,7 @@ const GameDetailPage = () => {
     <Box margin={10}>
       <Heading>{game.name}</Heading>
       <ExpandableText>{game.description_raw}</ExpandableText>
+      <GameAttribute game={game}></GameAttribute>
     </Box>
   );
 };
