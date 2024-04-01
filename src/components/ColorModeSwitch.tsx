@@ -11,8 +11,9 @@ const ColorModeSwitch = () => {
         as={colorMode === "dark" ? MdNightsStay : IoSunny}
         onClick={toggleColorMode}
         cursor={"pointer"}
+        transition="transform 0.2s ease-in"
+        _hover={{ transform: "scale(1.1)" }}
       ></Icon>
-      {/* <Text whiteSpace={"nowrap"}>Dark Mode</Text> */}
     </HStack>
   );
 };
