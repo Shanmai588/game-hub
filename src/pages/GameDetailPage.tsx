@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
-import { Grid, GridItem, Heading, Show, Spinner } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Show, Spinner } from "@chakra-ui/react";
 
 import ExpandableText from "../components/ExpandableText";
 import GameAttribute from "../components/GameAttribute";
@@ -31,19 +31,21 @@ const GameDetailPage = () => {
         base: "1fr",
         lg: "0.7fr 1fr",
       }}
+      margin={10}
     >
       <Show above="lg">
-        <GridItem area="aside" paddingX={5}>
+        <GridItem area="aside" paddingRight={10}>
           <GameTrailer id={game.id}></GameTrailer>
         </GridItem>
       </Show>
       <GridItem area="main">
+        <Show below="lg">
+          <GameTrailer id={game.id}></GameTrailer>
+          <Box mb={10}></Box>
+        </Show>
         <Heading>{game.name}</Heading>
         <ExpandableText>{game.description_raw}</ExpandableText>
         <GameAttribute game={game}></GameAttribute>
-        <Show below="lg">
-          <GameTrailer id={game.id}></GameTrailer>
-        </Show>
       </GridItem>
     </Grid>
   );

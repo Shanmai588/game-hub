@@ -1,5 +1,5 @@
 import useGameTrailers from "../hooks/useGameTrailers";
-import { Spinner } from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
 import { Media } from "../entities/Media";
 import MediaPlayer from "./MediaPlayer";
 import useGameScreenshots from "../hooks/useGameScreenShots";
@@ -30,7 +30,11 @@ const GameTrailer = ({ id }: Props) => {
     preview: shot.image,
     src: shot.image,
   }));
-  return <MediaPlayer mediaList={videos.concat(images)} />;
+  return (
+    <Box width={{ base: 500, lg: 700, xl: 800 }}>
+      <MediaPlayer mediaList={videos.concat(images)} />
+    </Box>
+  );
 };
 
 export default GameTrailer;
