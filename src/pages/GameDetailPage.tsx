@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
-import { Box, Heading, Spinner } from "@chakra-ui/react";
+import { Grid, GridItem, Heading, Show, Spinner } from "@chakra-ui/react";
 
 import ExpandableText from "../components/ExpandableText";
 import GameAttribute from "../components/GameAttribute";
+import GameTrailer from "../components/GameTrailer";
 
 // Define the expected shape of params
 
@@ -18,11 +19,33 @@ const GameDetailPage = () => {
   }
 
   return (
-    <Box margin={10}>
-      <Heading>{game.name}</Heading>
-      <ExpandableText>{game.description_raw}</ExpandableText>
-      <GameAttribute game={game}></GameAttribute>
-    </Box>
+    <Grid
+      templateAreas={{
+        // for moble
+        base: '"main"',
+        // for pc
+        lg: '"aside main"',
+      }}
+      //make the nav bar only take 200px
+      templateColumns={{
+        base: "1fr",
+        lg: "0.7fr 1fr",
+      }}
+    >
+      <Show above="lg">
+        <GridItem area="aside" paddingX={5}>
+          <GameTrailer id={game.id}></GameTrailer>
+        </GridItem>
+      </Show>
+      <GridItem area="main">
+        <Heading>{game.name}</Heading>
+        <ExpandableText>{game.description_raw}</ExpandableText>
+        <GameAttribute game={game}></GameAttribute>
+        <Show below="lg">
+          <GameTrailer id={game.id}></GameTrailer>
+        </Show>
+      </GridItem>
+    </Grid>
   );
 };
 
