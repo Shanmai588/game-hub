@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
-import { Media } from "./Media"; // Assuming Media interface is in a separate file
+import { Media } from "../entities/Media"; // Assuming Media interface is in a separate file
 import MediaPreview from "./MediaPreview";
 
 const MediaPlayer: React.FC<{ mediaList: Media[] }> = ({ mediaList }) => {
