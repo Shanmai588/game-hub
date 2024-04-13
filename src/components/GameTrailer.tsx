@@ -2,7 +2,7 @@ import useGameTrailers from "../hooks/useGameTrailers";
 import { Box, Spinner } from "@chakra-ui/react";
 import { Media } from "../entities/Media";
 import MediaPlayer from "./MediaPlayer";
-import useGameScreenshots from "../hooks/useGameScreenShots";
+import useGameScreenshots from "../hooks/useGameScreenshots";
 interface Props {
   id: number;
 }
